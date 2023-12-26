@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use Database\Seeders\Local\Tax\TaxSeeder;
 use Database\Seeders\Local\User\DefaultUserSeeder;
 use Database\Seeders\Local\User\UserSeeder;
 use Illuminate\Database\Seeder;
@@ -18,6 +19,7 @@ class DevSeeder extends Seeder
         $this->call([
             DefaultUserSeeder::class,
             UserSeeder::class,
+            TaxSeeder::class,
         ]);
     }
 }

@@ -2,7 +2,9 @@
 
 namespace Database\Seeders;
 
+use Database\Seeders\Local\Tax\TaxSeeder;
 use Illuminate\Database\Seeder;
+use Database\Seeders\Local\User\DefaultUserSeeder;
 
 class ProdSeeder extends Seeder
 {
@@ -14,7 +16,8 @@ class ProdSeeder extends Seeder
     public function run()
     {
         $this->call([
-            // DefaultUserSeeder::class,
+            DefaultUserSeeder::class,
+            TaxSeeder::class,
         ]);
     }
 }
