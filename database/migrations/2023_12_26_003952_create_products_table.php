@@ -22,9 +22,7 @@ return new class extends Migration
             $table->double('purchase_price');
             $table->integer('quantity');
             $table->integer('category_id')->nullable();
-            $table->foreign('category_id')->references('id')->on('categories');
             $table->integer('tax_id')->nullable();
-            $table->foreign('tax_id')->references('id')->on('taxes');
             $table->tinyInteger('enabled');
             $table->timestamp('created_at')->nullable();
             $table->timestamp('updated_at')->nullable();
