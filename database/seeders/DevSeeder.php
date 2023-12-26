@@ -2,10 +2,11 @@
 
 namespace Database\Seeders;
 
-use Database\Seeders\Local\Tax\TaxSeeder;
-use Database\Seeders\Local\User\DefaultUserSeeder;
-use Database\Seeders\Local\User\UserSeeder;
 use Illuminate\Database\Seeder;
+use Database\Seeders\Local\Tax\TaxSeeder;
+use Database\Seeders\Local\User\UserSeeder;
+use Database\Seeders\Local\User\DefaultUserSeeder;
+use Database\Seeders\Local\Currency\CurrencySeeder;
 
 class DevSeeder extends Seeder
 {
@@ -20,6 +21,7 @@ class DevSeeder extends Seeder
             DefaultUserSeeder::class,
             UserSeeder::class,
             TaxSeeder::class,
+            CurrencySeeder::class,
         ]);
     }
 }

@@ -2,9 +2,10 @@
 
 namespace Database\Seeders;
 
-use Database\Seeders\Local\Tax\TaxSeeder;
 use Illuminate\Database\Seeder;
+use Database\Seeders\Local\Tax\TaxSeeder;
 use Database\Seeders\Local\User\DefaultUserSeeder;
+use Database\Seeders\Local\Currency\CurrencySeeder;
 
 class ProdSeeder extends Seeder
 {
@@ -18,6 +19,7 @@ class ProdSeeder extends Seeder
         $this->call([
             DefaultUserSeeder::class,
             TaxSeeder::class,
+            CurrencySeeder::class,
         ]);
     }
 }
