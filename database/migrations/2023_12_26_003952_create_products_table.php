@@ -13,10 +13,8 @@ return new class extends Migration
     {
         Schema::disableForeignKeyConstraints();
 
-        Schema::create('items', function (Blueprint $table) {
+        Schema::create('products', function (Blueprint $table) {
             $table->integer('id')->primary();
-            $table->integer('company_id')->index();
-            $table->foreign('company_id')->references('id')->on('companies');
             $table->string('name');
             $table->string('sku')->nullable();
             $table->text('description')->nullable();
@@ -31,7 +29,7 @@ return new class extends Migration
             $table->timestamp('created_at')->nullable();
             $table->timestamp('updated_at')->nullable();
             $table->timestamp('deleted_at')->nullable();
-            $table->unique(['company_id', 'sku', 'deleted_at']);
+            $table->unique(['sku', 'deleted_at']);
         });
 
         Schema::enableForeignKeyConstraints();
@@ -42,6 +40,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('items');
+        Schema::dropIfExists('products');
     }
 };
