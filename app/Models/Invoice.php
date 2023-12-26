@@ -28,6 +28,7 @@ class Invoice extends Model
      * @var array
      */
     protected $casts = [
-        //
+        'invoiced_at' => 'datetime',
+        'amount' => 'double',
     ];
 }
