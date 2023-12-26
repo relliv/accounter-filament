@@ -23,9 +23,6 @@ class TaxResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('company_id')
-                    ->required()
-                    ->numeric(),
                 Forms\Components\TextInput::make('name')
                     ->required()
                     ->maxLength(255),

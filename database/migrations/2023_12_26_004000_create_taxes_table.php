@@ -15,8 +15,6 @@ return new class extends Migration
 
         Schema::create('taxes', function (Blueprint $table) {
             $table->integer('id')->primary();
-            $table->integer('company_id')->index();
-            $table->foreign('company_id')->references('id')->on('companies');
             $table->string('name');
             $table->double('rate');
             $table->string('type');
