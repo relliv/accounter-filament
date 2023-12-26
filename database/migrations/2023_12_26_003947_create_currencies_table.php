@@ -20,7 +20,6 @@ return new class extends Migration
             $table->double('rate');
             $table->string('precision')->nullable();
             $table->string('symbol')->nullable();
-            $table->integer('symbol_first');
             $table->string('decimal_mark')->nullable();
             $table->string('thousands_separator')->nullable();
             $table->tinyInteger('enabled');
