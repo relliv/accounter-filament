@@ -41,9 +41,6 @@ class TaxResource extends Resource
                 Tables\Columns\TextColumn::make('id')
                     ->numeric()
                     ->sortable(),
-                Tables\Columns\TextColumn::make('company_id')
-                    ->numeric()
-                    ->sortable(),
                 Tables\Columns\TextColumn::make('name')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('rate')
