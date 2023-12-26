@@ -32,8 +32,6 @@ class ContactResource extends Resource
                 Forms\Components\TextInput::make('email')
                     ->email()
                     ->maxLength(255),
-                Forms\Components\TextInput::make('user_id')
-                    ->numeric(),
                 Forms\Components\TextInput::make('tax_number')
                     ->maxLength(255),
                 Forms\Components\TextInput::make('phone')
@@ -67,9 +65,6 @@ class ContactResource extends Resource
                     ->searchable(),
                 Tables\Columns\TextColumn::make('email')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('user_id')
-                    ->numeric()
-                    ->sortable(),
                 Tables\Columns\TextColumn::make('tax_number')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('phone')

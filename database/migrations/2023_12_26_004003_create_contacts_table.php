@@ -18,7 +18,6 @@ return new class extends Migration
             $table->string('type');
             $table->string('name');
             $table->string('email')->nullable();
-            $table->integer('user_id')->nullable();
             $table->string('tax_number')->nullable();
             $table->string('phone')->nullable();
             $table->text('address')->nullable();
