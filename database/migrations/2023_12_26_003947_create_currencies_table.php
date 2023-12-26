@@ -15,8 +15,6 @@ return new class extends Migration
 
         Schema::create('currencies', function (Blueprint $table) {
             $table->integer('id')->primary();
-            $table->integer('company_id')->index();
-            $table->foreign('company_id')->references('id')->on('companies');
             $table->string('name');
             $table->string('code');
             $table->double('rate');
@@ -29,7 +27,6 @@ return new class extends Migration
             $table->timestamp('created_at')->nullable();
             $table->timestamp('updated_at')->nullable();
             $table->timestamp('deleted_at')->nullable();
-            $table->unique(['company_id', 'code', 'deleted_at']);
         });
 
         Schema::enableForeignKeyConstraints();
