@@ -13,7 +13,13 @@ class Bill extends Model
      * The attributes that are mass assignable
      */
     protected $fillable = [
-        //
+        'company_id',
+        'currency_id',
+        'billed_at',
+        'amount',
+        'category_id',
+        'contact_id',
+        'notes',
     ];
 
     /**
@@ -22,6 +28,7 @@ class Bill extends Model
      * @var array
      */
     protected $casts = [
-        //
+        'billed_at' => 'datetime',
+        'amount' => 'double',
     ];
 }
