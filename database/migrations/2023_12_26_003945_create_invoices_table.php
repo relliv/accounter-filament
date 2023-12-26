@@ -16,7 +16,6 @@ return new class extends Migration
         Schema::create('invoices', function (Blueprint $table) {
             $table->id();
             $table->integer('company_id')->index();
-            $table->string('invoice_number');
             $table->dateTime('invoiced_at');
             $table->double('amount');
             $table->string('currency_id');
