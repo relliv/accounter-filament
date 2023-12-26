@@ -29,9 +29,6 @@ class TaxResource extends Resource
                 Forms\Components\TextInput::make('rate')
                     ->required()
                     ->numeric(),
-                Forms\Components\TextInput::make('type')
-                    ->required()
-                    ->maxLength(255),
                 Forms\Components\Toggle::make('enabled')
                     ->required(),
             ]);
@@ -52,8 +49,6 @@ class TaxResource extends Resource
                 Tables\Columns\TextColumn::make('rate')
                     ->numeric()
                     ->sortable(),
-                Tables\Columns\TextColumn::make('type')
-                    ->searchable(),
                 Tables\Columns\IconColumn::make('enabled')
                     ->boolean(),
                 Tables\Columns\TextColumn::make('created_at')

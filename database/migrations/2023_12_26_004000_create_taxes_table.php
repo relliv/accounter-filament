@@ -17,8 +17,7 @@ return new class extends Migration
             $table->integer('id')->primary();
             $table->string('name');
             $table->double('rate');
-            $table->string('type');
-            $table->tinyInteger('enabled');
+            $table->tinyInteger('enabled')->default(1);
             $table->timestamp('created_at')->nullable();
             $table->timestamp('updated_at')->nullable();
             $table->timestamp('deleted_at')->nullable();

@@ -22,6 +22,6 @@ class Tax extends Model
      * @var array
      */
     protected $casts = [
-        //
+        'enabled' => 'boolean'
     ];
 }
