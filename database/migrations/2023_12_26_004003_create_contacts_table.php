@@ -21,7 +21,6 @@ return new class extends Migration
             $table->string('name');
             $table->string('email')->nullable();
             $table->integer('user_id')->nullable();
-            $table->foreign('user_id')->references('id')->on('users');
             $table->string('tax_number')->nullable();
             $table->string('phone')->nullable();
             $table->text('address')->nullable();
