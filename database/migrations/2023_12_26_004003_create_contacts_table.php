@@ -15,8 +15,6 @@ return new class extends Migration
 
         Schema::create('contacts', function (Blueprint $table) {
             $table->integer('id')->primary();
-            $table->integer('company_id')->index();
-            $table->foreign('company_id')->references('id')->on('companies');
             $table->string('type');
             $table->string('name');
             $table->string('email')->nullable();
@@ -31,8 +29,6 @@ return new class extends Migration
             $table->timestamp('created_at')->nullable();
             $table->timestamp('updated_at')->nullable();
             $table->timestamp('deleted_at')->nullable();
-            $table->index(['company_id', 'type']);
-            $table->unique(['company_id', 'type', 'email', 'deleted_at']);
         });
 
         Schema::enableForeignKeyConstraints();
