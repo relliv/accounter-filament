@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::disableForeignKeyConstraints();
 
         Schema::create('contacts', function (Blueprint $table) {
-            $table->integer('id')->primary();
+            $table->id();
             $table->string('type');
             $table->string('name');
             $table->string('email')->nullable();

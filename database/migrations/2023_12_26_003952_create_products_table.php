@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::disableForeignKeyConstraints();
 
         Schema::create('products', function (Blueprint $table) {
-            $table->integer('id')->primary();
+            $table->id();
             $table->string('name');
             $table->string('sku')->nullable();
             $table->text('description')->nullable();

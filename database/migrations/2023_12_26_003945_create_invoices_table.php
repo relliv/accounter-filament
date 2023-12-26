@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::disableForeignKeyConstraints();
 
         Schema::create('invoices', function (Blueprint $table) {
-            $table->integer('id')->primary();
+            $table->id();
             $table->integer('company_id')->index();
             $table->foreign('company_id')->references('id')->on('companies');
             $table->string('invoice_number');

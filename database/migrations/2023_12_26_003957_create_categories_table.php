@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::disableForeignKeyConstraints();
 
         Schema::create('categories', function (Blueprint $table) {
-            $table->integer('id')->primary();
+            $table->id();
             $table->string('name');
             $table->string('type');
             $table->string('color');

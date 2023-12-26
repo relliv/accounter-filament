@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::disableForeignKeyConstraints();
 
         Schema::create('taxes', function (Blueprint $table) {
-            $table->integer('id')->primary();
+            $table->id();
             $table->string('name');
             $table->double('rate');
             $table->tinyInteger('enabled')->default(1);
